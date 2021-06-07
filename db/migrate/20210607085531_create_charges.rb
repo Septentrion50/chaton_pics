@@ -4,7 +4,7 @@ class CreateCharges < ActiveRecord::Migration[5.2]
       t.string :stripe_id
       t.string :token
       t.string :currency
-
+      t.belongs_to :user
       t.timestamps
     end
   end

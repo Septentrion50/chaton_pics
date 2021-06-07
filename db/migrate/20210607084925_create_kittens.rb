@@ -4,7 +4,6 @@ class CreateKittens < ActiveRecord::Migration[5.2]
       t.float :price
       t.text :description
       t.string :name
-
       t.timestamps
     end
   end

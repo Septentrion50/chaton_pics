@@ -1,0 +1,17 @@
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+ <div class="row">
+  <% @kittens.each do |kitten| %> 
+    <div class="col-sm-6 card-deck">
+    <div class="card mb-3" style="width: 20rem; text-align: center">
+      <div class="card-body">
+        <h5 class="card-title"><%= kitten.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Admin :</h6>
+            <p class="card-text"> some text </p>
+            <p class="card-text"> some other text </p>            
+            <a href="<%= kitten_path(kitten.id) %>" class="card-link btn btn-dark">Show</a>
+      </div>
+    </div>
+    </div>
+  <% end %>   
+  </div>
