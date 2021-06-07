@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_091359) do
 
   create_table "wallets", force: :cascade do |t|
     t.float "amount"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
