@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <% @kittens.each do |kitten| %> 
-    <% @kitten = kitten %>
-    <div class="col-12 card h-100">
-      <%= render :partial => "kitten_card", :object => @kitten %>
+      <% @kitten = kitten %>
+      <div class="col-12 col-sm-6 mb-4">
+        <%= render :partial => "kitten_card", :object => @kitten %>
+      </div> 
     <% end %>
-    </div> 
   </div>
 </div>
