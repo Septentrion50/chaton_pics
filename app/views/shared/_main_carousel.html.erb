@@ -8,12 +8,7 @@
 
     <div class="carousel-inner">
         <!-- BODY -->
-        <% imgArr = [
-            'https://images.pexels.com/photos/399647/pexels-photo-399647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-            'https://images.pexels.com/photos/4062842/pexels-photo-4062842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-            'https://images.pexels.com/photos/1404824/pexels-photo-1404824.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        ] %>
-        <% imgArr.each.with_index do |img, index| %>
+        <% @imgArr.each.with_index do |img, index| %>
             <div class="carousel-item<% if index == 0 %> active<% end %>">
                 <!-- Picture -->
                 <div class="bd-placeholder-img" style="background: url('<%= img %>') center center no-repeat; background-size: cover;"></div>

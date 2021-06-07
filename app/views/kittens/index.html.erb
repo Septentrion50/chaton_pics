@@ -1,5 +1,10 @@
 <!-- CAROUSEL -->
-<%= render :partial => "main_carousel" %>
+<% @imgArr = [
+    'https://images.pexels.com/photos/399647/pexels-photo-399647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    'https://images.pexels.com/photos/4062842/pexels-photo-4062842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    'https://images.pexels.com/photos/1404824/pexels-photo-1404824.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+] %>
+<%= render :partial => "shared/main_carousel", :object => @imgArr %>
 
 <!-- CONTENT -->
 <div class="container">
@@ -8,7 +13,7 @@
       <% @kitten = kitten %>
       <div class="col-12 col-sm-6 col-md-4 mb-4">
         <%= render :partial => "kitten_card", :object => @kitten %>
-      </div> 
+      </div>
     <% end %>
   </div>
 </div>
