@@ -1,9 +1,13 @@
 <div id="main-carousel" class="carousel slide mb-5" data-bs-ride="carousel">
     <!-- INDICATOR BUTTONS -->
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-label="Slide 1" aria-current="true" class="active"></button>
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <% @imgArr.each.with_index do |img, index| %>
+            <button type="button" 
+                    data-bs-target="#main-carousel" 
+                    data-bs-slide-to="<%= index %>" 
+                    aria-label="Slide <%= index + 1 %>" 
+                    <% if index == 0 %> aria-current="true" class="active"<% end %>></button>
+        <% end %>
     </div>
 
     <div class="carousel-inner">
