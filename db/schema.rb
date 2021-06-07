@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(version: 2021_06_07_130053) do
     t.string "stripe_id"
     t.string "token"
     t.string "currency"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "wallet_id"
+    t.index ["user_id"], name: "index_charges_on_user_id"
     t.index ["wallet_id"], name: "index_charges_on_wallet_id"
   end
 
@@ -35,11 +37,13 @@ ActiveRecord::Schema.define(version: 2021_06_07_130053) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "wallet_id"
     t.bigint "charge_id"
     t.index ["charge_id"], name: "index_orders_on_charge_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
     t.index ["wallet_id"], name: "index_orders_on_wallet_id"
   end
 
@@ -57,6 +61,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_130053) do
 
   create_table "wallets", force: :cascade do |t|
     t.float "amount"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
