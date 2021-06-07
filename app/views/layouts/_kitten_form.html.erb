@@ -1,0 +1,29 @@
+<div class="container">
+
+<div class="row ml-3">
+    <div class="offset-md-3 col-md-6 offset-md-3">
+
+        <%= form_tag(tasks_path, method: "post", class: "form", id: "contact-form", remote: true)  do %>
+
+            <div class="form-group">
+                <%= label_tag "Name", nil, class: "form-label" %>
+                <%= texte_field_tag :name, nil, class: "form-control", id: "kitten-name" %>
+            </div>
+
+            <div class="form-group">
+                <%= label_tag "Description", nil, class: "form-label" %>
+                <%= texte_area_tag :description, nil, class: "form-control", id: "kitten-description" %>
+            </div>
+
+            <div class="form-group">
+                <%= label_tag "Price", nil, class: "form-label" %>
+                <%= number_field_tag "Price", class: "form-control", id: "kitten-price", type="number"  %>
+            </div>
+
+            <div class="text-center">
+                <%= submit_tag("Create kitten", class: "btn btn-start-order") %>
+            </div>
+        <%end%>
+    </div>
+</div>
+
