@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  *= require styles
- *= main
- *= header
- *= footer
+ *= require main
+ *= require header
+ *= require footer
+ *= require kittens
+ *= require users
+ *= require charges
  */
