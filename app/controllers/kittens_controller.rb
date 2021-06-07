@@ -31,6 +31,7 @@ class KittensController < ApplicationController
     end
 
     def update
+        @kitten = kitten_find
         @kitten.update(kitten_params)
     end
 
