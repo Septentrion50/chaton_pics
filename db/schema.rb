@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2021_06_08_083332) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2021_06_08_083332) do
+=======
 ActiveRecord::Schema.define(version: 2021_06_08_080427) do
+>>>>>>> edce849defea5dc0e2a5dab7efec3d00247c7fff
+>>>>>>> fb2bdae4548c0ecd75e563cf251c73ba213173dc
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,10 +48,22 @@ ActiveRecord::Schema.define(version: 2021_06_08_080427) do
     t.string "stripe_id"
     t.string "token"
     t.string "currency"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "wallet_id"
+    t.index ["user_id"], name: "index_charges_on_user_id"
     t.index ["wallet_id"], name: "index_charges_on_wallet_id"
+  end
+
+  create_table "join_wallet_items", force: :cascade do |t|
+    t.bigint "wallet_id"
+    t.bigint "kitten_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kitten_id"], name: "index_join_wallet_items_on_kitten_id"
+    t.index ["wallet_id"], name: "index_join_wallet_items_on_wallet_id"
   end
 
   create_table "kittens", force: :cascade do |t|
@@ -56,11 +76,13 @@ ActiveRecord::Schema.define(version: 2021_06_08_080427) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "wallet_id"
     t.bigint "charge_id"
     t.index ["charge_id"], name: "index_orders_on_charge_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
     t.index ["wallet_id"], name: "index_orders_on_wallet_id"
   end
 
@@ -80,9 +102,12 @@ ActiveRecord::Schema.define(version: 2021_06_08_080427) do
 
   create_table "wallets", force: :cascade do |t|
     t.float "amount"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "join_wallet_items", "kittens"
+  add_foreign_key "join_wallet_items", "wallets"
 end
