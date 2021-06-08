@@ -1,0 +1,2 @@
+module JoinWalletItemsHelper
+end
