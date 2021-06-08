@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Wallet:</strong>
+  <%= @join_wallet_item.wallet %>
+</p>
+
+<p>
+  <strong>Kitten:</strong>
+  <%= @join_wallet_item.kitten %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @join_wallet_item.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_join_wallet_item_path(@join_wallet_item) %> |
+<%= link_to 'Back', join_wallet_items_path %>

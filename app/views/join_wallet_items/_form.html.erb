@@ -1,0 +1,32 @@
+<%= form_with(model: join_wallet_item, local: true) do |form| %>
+  <% if join_wallet_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(join_wallet_item.errors.count, "error") %> prohibited this join_wallet_item from being saved:</h2>
+
+      <ul>
+      <% join_wallet_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :wallet_id %>
+    <%= form.text_field :wallet_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kitten_id %>
+    <%= form.text_field :kitten_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
