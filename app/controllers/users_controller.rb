@@ -8,8 +8,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = user_find
+    @user = find_user
     @user.update(permited_params)
+    redirect_to '/'
   end
   
   private 
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def permited_params
-    params.permit(:firstname, :lastname)
+    params.permit(:firstname,:lastname)
   end
 
 end
