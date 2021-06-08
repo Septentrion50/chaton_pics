@@ -10,12 +10,13 @@ body, html{
 	margin: 0;
 	font-family: 'Sniglet', cursive;
 }
-h1{
+#h1_contact{
 	font-weight: normal;
 	font-size: 4em;
 	font-family: 'Raleway', sans-serif;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 0px;
+	margin-bottom: 70px;
 	width: 500px;
 	color: #F90;
 	text-align: center;
@@ -62,9 +63,6 @@ h1{
 	-webkit-animation-delay: 12s;
 }
 
-
-
-
 #form{
 	height: 100%;	
 	background-color: #98d4f3;
@@ -72,15 +70,40 @@ h1{
 	position: relative;
 	
 }
-form{
+#email-form {
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 0px;
+	color: white;
+	position: relative;
+}
+
+#name-form {
 	margin: 0 auto;
 	width: 500px;
 	padding-top: 40px;
 	color: white;
 	position: relative;
-	
-	
 }
+
+#message-form {
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 0px;
+	color: white;
+	position: relative;
+}
+
+#send-form {
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 0px;
+	color: white;
+	position: relative;
+}
+
+
+
 label, input, textarea{
 	display: block;	
 }
