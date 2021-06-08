@@ -135,7 +135,7 @@ textarea{
 	resize: none; 
 	overflow: auto;
 }
-input[type="submit"]{
+.btn-submit-contact-us[type="submit"]{
 	background-color: #F90;
 	color: white;
 	height: 50px;
@@ -148,7 +148,7 @@ input[type="submit"]{
 	-o-transition: background-color 0.5s;
 	transition: background-color 0.5s;
 }
-input[type="submit"]:hover{
+.btn-submit-contact-us[type="submit"]:hover{
 	background-color: #e58f0e;
 	
 }
