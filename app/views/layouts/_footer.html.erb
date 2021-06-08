@@ -1,17 +1,21 @@
 <footer class="footer-basic mt-auto">
-    <div class="social"><a href="https://www.instagram.com/kittensthp/"><i class="icon ion-social-instagram"></i></a></div>
+    <div class="social">
+        <a href="https://www.instagram.com/kittensthp/">
+            <i class="icon ion-social-instagram"></i>
+        </a>
+    </div>
     <ul class="list-inline">
         <li class="list-inline-item">
-            <a href="/pages/about">About</a>
+            <%= link_to 'About', 'static_pages/about' %>
         </li>
         <li class="list-inline-item">
-            <a href="/pages/contact_us">Contact Us</a>
+            <%= link_to 'Contact Us', 'static_pages/contact' %>
         </li>
         <li class="list-inline-item">
-            <a href="/pages/terms_and_conditions">Terms</a>
+            <%= link_to 'Terms', 'static_pages/terms' %>
         </li>
         <li class="list-inline-item">
-            <a href="/pages/privacy_policy">Privacy Policy</a>
+            <%= link_to 'Privacy Policy', 'static_pages/privacy_policy' %>
         </li>
     </ul>
     <p class="copyright">Kittens THP © 2021</p>
