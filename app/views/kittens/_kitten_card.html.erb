@@ -1,11 +1,13 @@
 <div class="card h-100">
-    <div class="card-img-top" style="background-image: url(<%=@kitten.image_url%>);">
-    </div>
+    <% if @kitten.picture.attached? %>
+        <%= image_tag @kitten.picture, alt: 'picture', class: 'w-100'%>
+    <% end %>
     <div class="card-body">
         <h5 class="card-title"><%= @kitten.name %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Admin :</h6>
         <p class="card-text"> some text </p>
-        <p class="card-text"> some other text </p>            
+        <p class="card-text"> some other text </p>
         <a href="<%= kitten_path(@kitten.id) %>" class="card-link btn btn-dark">Show</a>
+        <%#= button_to "Ajouter au panier", join_wallet_items_path(kitten_id: @kitten), class: "btn btn-outline-primary"%>
     </div>
 </div>
