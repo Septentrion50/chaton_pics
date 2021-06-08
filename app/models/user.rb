@@ -7,4 +7,12 @@ class User < ApplicationRecord
   has_many :orders
   has_many :charges 
   
+  after_create :welcome_send
+
+  private
+  
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
+
 end
