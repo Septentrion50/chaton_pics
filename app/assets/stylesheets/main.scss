@@ -3,3 +3,10 @@ ul,li {
     padding: 0;
     list-style: none;
 }
+
+.card-img-top {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20rem;
+}
