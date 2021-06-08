@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'kittens#index'
+  get "/pages/:page" => "pages#show"
   devise_for :users
   resources :kittens 
   resources :wallets, except: [:index]
