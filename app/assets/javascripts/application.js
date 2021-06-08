@@ -15,3 +15,4 @@
 //= require jquery_ujs
 //= require activestorage
 //= require main
+//= require kittens
