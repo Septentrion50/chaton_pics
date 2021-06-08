@@ -58,7 +58,8 @@ kittensArr = [
     description:Faker::Cannabis.cannabinoid,
     price:Faker::Number.decimal(l_digits: 2),
     name:Faker::Cannabis.buzzword,
-    image_url:kittensArr.sample
+    #image_url:kittensArr.sample
+    image_url:'pexels-francesco-ungaro-96428.jpg'
   )
 end
 
