@@ -11,6 +11,6 @@ class UserMailer < ApplicationMailer
     #     @user = user
     #     @order = order
     #     @charge = charge
-    #     mail(to: @user.email, subject: 'Voici le récapitulatif de votre commande') 
+    #     mail(to: @user.email, subject: 'Voici le récapitulatif de ta commande') 
     # end
 end
