@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+User.destroy_all
 Charge.destroy_all
 Kitten.destroy_all
 Order.destroy_all
@@ -52,13 +53,12 @@ kittensArr = [
   'https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   'https://images.pexels.com/photos/479009/pexels-photo-479009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 ]
-30.times do 
+16.times do 
   Kitten.create(
     description:Faker::Cannabis.cannabinoid,
     price:Faker::Number.decimal(l_digits: 2),
     name:Faker::Cannabis.buzzword,
-    #image_url:kittensArr.sample
-    image_url:'pexels-francesco-ungaro-96428.jpg'
+    image_url:kittensArr.sample
   )
 end
 

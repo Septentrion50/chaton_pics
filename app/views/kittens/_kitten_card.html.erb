@@ -2,7 +2,7 @@
     <% if @kitten.picture.attached? %>
         <%= image_tag @kitten.picture, alt: 'picture', class: 'w-100'%>
     <% else %>
-        <%= image_tag 'pexels-russie-1560424.jpg', alt: 'picture', class: 'w-100'%>
+        <%= image_tag @kitten.image_url, alt: 'picture', class: 'w-100'%>
     <% end %>
     <div class="card-body">
         <h5 class="card-title"><%= @kitten.name %></h5>
