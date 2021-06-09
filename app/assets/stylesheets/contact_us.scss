@@ -92,12 +92,95 @@
 	position: relative;
 }
 
+#send-form {
+	display: block;	
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: solid 3px #77bde0;	
+}
+#email {
+	display: block;	
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: solid 3px #77bde0;
+}
+#name {
+	display: block;	
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: solid 3px #77bde0;
+}
 
+#send {
+	display: block;	
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: solid 3px #77bde0;
+	margin: 0 auto;
+    display: block;
+}
 
-/*label, input, textarea{
+label, textarea{
 	display: block;
 }
-input, textarea{
+
+textarea{
 	width: 500px;
 	border: none;
 	border-radius: 20px;
@@ -115,7 +198,8 @@ input, textarea{
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
-input:focus, textarea:focus{
+
+textarea:focus{
 	border: solid 3px #77bde0;
 }
 
@@ -123,7 +207,8 @@ textarea{
 	height: 100px;
 	resize: none;
 	overflow: auto;
-}*/
+}
+
 .btn-submit-contact-us[type="submit"]{
 	background-color: #F90;
 	color: white;
