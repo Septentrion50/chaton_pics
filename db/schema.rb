@@ -40,11 +40,9 @@ ActiveRecord::Schema.define(version: 2021_06_09_101149) do
     t.string "stripe_id"
     t.string "token"
     t.string "currency"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "wallet_id"
-    t.index ["user_id"], name: "index_charges_on_user_id"
     t.index ["wallet_id"], name: "index_charges_on_wallet_id"
   end
 
@@ -92,4 +90,3 @@ ActiveRecord::Schema.define(version: 2021_06_09_101149) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end
-
