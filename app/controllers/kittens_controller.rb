@@ -4,6 +4,7 @@ class KittensController < ApplicationController
     end
 
     def show
+        flash[:notice] = "Photo chargée"
         @kitten = kitten_find
     end
 
@@ -19,11 +20,11 @@ class KittensController < ApplicationController
         )
 
         if @kitten.save && params[:picture]
-            flash[:notice] = "Kitten created!"
+            flash[:notice] = "Carte chaton créée !"
             @kitten.picture.attach(params[:picture]) #attribution de la photo à kitten
             redirect_to kittens_path
         else
-            flash.now[:notice] = "Something went wrong"
+            flash.now[:notice] = "Ouppps !"
             render :new
         end
     end

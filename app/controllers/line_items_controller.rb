@@ -4,8 +4,13 @@ class LineItemsController < ApplicationController
     def create
         @order = current_order
         @line_item = @order.line_items.new(order_params)
-        @order.save
-        session[:order_id] = @order.id
+        if @order.save
+            session[:order_id] = @order.id
+            redirect_to root_path
+        else
+            puts @order.errors.messages
+            redirect_to root_path
+        end
     end
 
     def update
@@ -25,6 +30,6 @@ class LineItemsController < ApplicationController
     private
 
     def order_params
-        params.require(:line_item).permit(:kitten_id, :quantity)
+        params.permit(:kitten_id, :quantity)
     end
 end

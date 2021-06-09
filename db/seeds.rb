@@ -8,7 +8,6 @@
 require 'faker'
 Charge.destroy_all
 Kitten.destroy_all
-Wallet.destroy_all
 Order.destroy_all
 
 10.times do 

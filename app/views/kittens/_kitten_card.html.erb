@@ -10,6 +10,6 @@
         <p class="card-text"> some text </p>
         <p class="card-text"> some other text </p>
         <a href="<%= kitten_path(@kitten.id) %>" class="card-link btn btn-dark">Show</a>
-        <%= button_to "Ajouter au panier", join_wallet_items_url_index_path, method: :post, class: "btn btn-outline-primary"%>
+        <%= button_to "Ajouter au panier", line_items_path, method: :post, params: {kitten_id: @kitten.id}, class: "btn btn-outline-primary"%>
     </div>
 </div>

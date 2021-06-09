@@ -1,10 +1,8 @@
-<div class="container">
-    <div class="row justify-content-md-center mt-5">
-        <div class="col-12 col-sm-12 col-md-6" >
-            <h1>Modifier mes infos</h1>
-                <%= render 'form', user: @user %>
-                <%= link_to 'Show', @user %> |
-                <%= link_to "Back", :back %>
+<div class="container d-flex flex-column align-items-center mb-5">
+    <h1>Modifier mes infos</h1>
+        <div class="mw-form">
+            <%= render 'form', user: @user %>
+            <%= link_to 'Show', @user, class: "btn btn-secondary" %>
+            <%= link_to "Back", :back, class: "btn btn-primary me-1"%>
         </div>
-    </div>
 </div>
