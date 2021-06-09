@@ -1,5 +1,5 @@
 <div class="container d-flex flex-column align-items-center mb-5">
-  <h1>Se connecter</h1>
+  <h1 class="mt-5">Se connecter</h1>
   <div class="mw-form">
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,7 +21,7 @@
       </div>
     <% end %>
 
-      <div class="form-group mt-3">
+      <div class="form-group mt-3 mb-3">
         <%= f.submit "Enregistrer", class: "btn btn-success"%>
       </div>
     <% end %>
