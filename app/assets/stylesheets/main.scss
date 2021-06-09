@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'CrimsonText-Bold';
+    src: url('app/assets/fonts/CrimsonText-Bold.ttf');
+    font-family: 'CrimsonText-BoldItalic';
+    src: url('app/assets/fonts/CrimsonText-BoldItalic.ttf');
+    font-family: 'CrimsonText-Italic';
+    src: url('app/assets/fonts/CrimsonText-Italic.ttf');
+    font-family: 'CrimsonText-Regular';
+    src: url('app/assets/fonts/CrimsonText-Regular.ttf');
+    font-family: 'CrimsonText-SemiBold';
+    src: url('app/assets/fonts/CrimsonText-SemiBold.ttf');
+    font-family: 'CrimsonText-SemiBoldItalic';
+    src: url('app/assets/fonts/CrimsonText-SemiBoldItalic.ttf');
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'CrimsonText-Regular'!important;
+}
+
+p {
+    font-size: medium!important;
+}
+
 ul,li {
     margin: 0;
     padding: 0;
@@ -14,3 +37,4 @@ ul,li {
 body {
     background-color:#ffe9ec!important;
 }
+
