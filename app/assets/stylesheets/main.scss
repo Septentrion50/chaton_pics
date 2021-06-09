@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+
 @font-face {
     font-family: 'CrimsonText-Bold';
     src: url('app/assets/fonts/CrimsonText-Bold.ttf');
@@ -13,16 +15,17 @@
     src: url('app/assets/fonts/CrimsonText-SemiBoldItalic.ttf');
 }
 
+body {
+    background-color:#ffe9ec!important;
+	font-family: 'Sniglet', cursive;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'CrimsonText-Regular'!important;
 }
 
 p {
     font-size: medium!important;
-}
-
-body {
-    background-color:#ffe9ec!important;
 }
 
 ul,li {
