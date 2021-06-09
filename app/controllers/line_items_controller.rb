@@ -1,5 +1,4 @@
 class LineItemsController < ApplicationController
-    before_action :authenticate_user!
 
     def create
         @order = current_order
@@ -25,6 +24,7 @@ class LineItemsController < ApplicationController
         @line_item = @order.line_items.find(params[:id])
         @line_item.destroy
         @line_items = current_order.line_items
+        redirect_to root_path
     end
 
     private
