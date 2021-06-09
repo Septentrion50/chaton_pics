@@ -1,21 +1,21 @@
 class LineItem < ApplicationRecord
     belongs_to :order
-    belongs_to :product
+    belongs_to :kitten
 
-    before_save :set_price
-    before_save :set_total
+    # before_save :set_price
+    # before_save :set_total
 
     def price
         if persisted?
             self[:price]
         else
-            kitten.price
+            self.kitten.price
         end
     end
 
-    def total
-        price * quantity
-    end
+    # def total
+    #     price * quantity
+    # end
 
     private
 
