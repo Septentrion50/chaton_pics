@@ -1,9 +1,15 @@
 <%# ALERTE %>
-<%# flash.each do |type, msg| %>
-    <div class="alert <%#= bootstrap_class_for_flash(type) %> alert-dismissable d-flex justify-content-between align-items-center fade show" role="alert">
-        <span class="align-self-center">
-            <%#= msg %>
-        </span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<% if flash[:notice].present? || flash[:error].present? %>
+    <div class="alert alert-flash <% if flash[:notice].present? %>alert-secondary<% elsif flash[:error].present? %>alert-danger<% end %>" role="alert">
+        <div class="d-flex justify-content-between">
+            <div class="mw-form">
+                <% if flash[:notice].present? %>
+                    <%= flash[:notice] %>
+                <% elsif flash[:error].present? %>
+                    <%= flash[:error] %>
+                <% end %>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     </div>
-<%# end %>
+<% end %>

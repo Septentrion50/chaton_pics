@@ -14,9 +14,13 @@
   </head>
 
   <body class="d-flex flex-column vh-100 pt-5">
+    <!-- HEADER -->
     <%= render 'layouts/header' %>
+    <!-- ALERT -->
     <%= render 'layouts/flash'%>
+    <!-- CONTENT -->
     <%= yield %>
+    <!-- FOOTER -->
     <%= render 'layouts/footer' %>
   </body>
 </html>
