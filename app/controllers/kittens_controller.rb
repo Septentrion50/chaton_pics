@@ -4,7 +4,7 @@ class KittensController < ApplicationController
     end
 
     def show
-        flash[:notice] = "TEST !"
+        flash[:notice] = "Photo chargée"
         @kitten = kitten_find
     end
 
