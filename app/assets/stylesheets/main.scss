@@ -21,6 +21,10 @@ p {
     font-size: medium!important;
 }
 
+body {
+    background-color:#ffe9ec!important;
+}
+
 ul,li {
     margin: 0;
     padding: 0;
@@ -34,7 +38,9 @@ ul,li {
     height: 20rem;
 }
 
-body {
-    background-color:#ffe9ec!important;
-}
 
+
+.mw-form {
+    width: 100%;
+    max-width: 25rem;
+}

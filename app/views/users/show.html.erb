@@ -1,5 +1,9 @@
-<h1>Edit your profile  </h1>
-<p> first_name: <%= current_user.firstname %> </p>
-<p> last name : <%=current_user.lastname %> </p>
-<a href="<%= edit_user_registration_path %>" class ="btn btn-outline-danger">Edit Registration Infos</a> <br>
-<a href="<%= edit_user_path(current_user.id) %>" class ="btn btn-outline-success">Edit General Infos</a> <br>
+<div class="container d-flex flex-column align-items-center mb-5">
+    <h1>Modifier ton profil</h1>
+    <div class="mw-form">
+        <p class="mt-2"> Prénom : <%= current_user.firstname %> </p>
+        <p> Nom : <%=current_user.lastname %> </p>
+        <a href="<%= edit_user_registration_path %>" class ="btn btn-danger me-2">Modifier mon compte</a>
+        <a href="<%= edit_user_path(current_user.id) %>" class ="btn btn-success">Modifier mon blaze</a>
+    </div>
+</div>

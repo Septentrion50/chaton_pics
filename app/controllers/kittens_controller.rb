@@ -8,6 +8,7 @@ class KittensController < ApplicationController
     end
 
     def new
+        @kitten = Kitten.new
     end
 
     def create
@@ -17,9 +18,10 @@ class KittensController < ApplicationController
             price: params[:price]
         )
 
-        if @kitten.save
+        if @kitten.save && params[:picture]
             flash[:notice] = "Kitten created!"
-            redirect_to kitten_path(@kitten.id)
+            @kitten.picture.attach(params[:picture]) #attribution de la photo à kitten
+            redirect_to kittens_path
         else
             flash.now[:notice] = "Something went wrong"
             render :new
