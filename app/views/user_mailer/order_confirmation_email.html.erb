@@ -5,8 +5,12 @@
     <body>
         <h1>Bonjour <%= @user.firstname %>,</h1>
         <p>Nous te remercions pour ta commande.</p>
-        <p>Tu peux récupérer ta photo <%= @kitten.name.order %> disponible en pièce-jointe de cet email.</p>
+        <p>Tu peux récupérer ta photo disponible en pièce-jointe de cet email.</p>
         <p>Pour accéder à ton espace client, connecte-toi via : <%= @url %>.</p>
         <p> À très vite sur monsite.fr !</p>
+
+        <%# <% if @kitten.picture.attached? %>
+            <%# <%= image_tag @kitten.picture, alt: 'picture', class: 'w-100'%>
+        <%# <% end %>
     </body>
 </html>
