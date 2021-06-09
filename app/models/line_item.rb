@@ -18,7 +18,7 @@ class LineItem < ApplicationRecord
     # end
 
     private
-
+    
     def set_price
         self[:price] = price
     end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :kittens do
     resources :pictures
   end
-  resources :wallets, only: [:show] 
+  resources :wallets, only: [:index] 
   resources :charges, only: [:new, :create]
   resources :users, only: [:show, :edit , :update]
   resources :line_items, only: [:create, :update, :destroy]
