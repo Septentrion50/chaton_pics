@@ -6,7 +6,7 @@
     </div>
   <% end %>
   <label class="amount">
-    <span>Amount: <%= number_to_currency total_charge(current_order) / 100%></span>
+    <span>Amount: <%= total_charge(current_order) / 100.0%> €</span>
   </label>
 </article>
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
