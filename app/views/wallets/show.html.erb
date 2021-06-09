@@ -6,6 +6,7 @@
   <% @wallet.join_wallet_items.each do |item| %>
     <li><%= item.kitten.name%></li>
     <li><%= item.kitten.price%></li>
+    <%end%>
 </ul>
 
 <p><%=link_to "Retour aux produits", root_path%> </p>

@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :wallets, except: [:index]
   resources :charges, only: [:new, :create]
   resources :users, only: [:show, :edit , :update]
-  resources :join_wallet_items_url
+  resources :line_items, only: [:create, :update, :destroy]
 end
