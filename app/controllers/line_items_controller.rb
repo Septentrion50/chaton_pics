@@ -4,8 +4,13 @@ class LineItemsController < ApplicationController
     def create
         @order = current_order
         @line_item = @order.line_items.new(order_params)
-        @order.save
-        session[:order_id] = @order.id
+        if @order.save
+            session[:order_id] = @order.id
+            redirect_to root_path
+        else
+            puts @order.errors.messages
+            redirect_to root_path
+        end
     end
 
     def update
