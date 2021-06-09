@@ -14,7 +14,7 @@ Order.destroy_all
 10.times do 
   User.create(
     email: Faker::Internet.safe_email,
-    password:Faker::Address.city
+    password:Faker::Internet.password(min_length: 8)
   ) 
 end
 
