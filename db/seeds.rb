@@ -11,15 +11,6 @@ Charge.destroy_all
 Kitten.destroy_all
 Order.destroy_all
 
-<<<<<<< HEAD
-# 10.times do 
-#   string = Faker::Kpop.i_groups
-#   User.create(
-#     email: "#{string}@yopmail.com",
-#     password:Faker::Internet.password(min_length: 8)
-#   ) 
-# end
-=======
 10.times do 
   User.create(
     email: Faker::Internet.safe_email,
@@ -27,7 +18,6 @@ Order.destroy_all
     is_admin: Faker::Boolean.boolean
   )
 end
->>>>>>> dev
 
 # 30.times do 
 #   Wallet.create(
