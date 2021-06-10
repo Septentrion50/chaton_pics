@@ -35,6 +35,11 @@
                                 <%= link_to "S'inscrire", new_user_registration_path, class: "nav-link" %>
                             </li>
                         <% else %>
+                            <% if is_admin? %>
+                                <li class="nav-item">
+                                    <%= link_to "Dashboard", admin_kittens_path, class: "nav-link" %>
+                                </li>
+                            <% end %>
                             <li class="nav-item">
                                 <%= link_to "Mon profil", user_path(current_user.id), class: "nav-link" %>
                             </li>

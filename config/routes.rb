@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   resources :users, only: [:show, :edit , :update]
   resources :line_items, only: [:create, :update, :destroy]
+  namespace :admin do
+    resources :kittens
+  end
 
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
