@@ -1,0 +1,16 @@
+<li class="border-bottom border-light py-1">
+    <div class="row align-items-center">
+        <div class="col-12 col-sm-6">
+            <%= @kitten.name %>
+        </div>
+        <div class="col-12 col-sm-6 d-flex justify-content-end">
+            <%= link_to "Edition", 
+                edit_admin_kitten_path(@kitten.id), 
+                class: "btn btn-secondary btn-sm ms-1 my-1" %>
+            <%= link_to "Suppression", 
+                admin_kitten_path(@kitten.id), 
+                method: :delete,
+                class: "card-link btn btn-dark btn-sm ms-1 my-1" %>
+        </div>
+    </div>
+</li>
