@@ -74,6 +74,8 @@
 	padding-top: 40px;
 	color: white;
 	position: relative;
+	
+	
 }
 
 #message-form {
@@ -112,7 +114,9 @@
 	box-sizing:border-box;
 	border: solid 3px #77bde0;	
 }
-#email {
+
+
+.input_contact {
 	display: block;	
 	width: 500px;	
 	border: none;
@@ -132,26 +136,7 @@
 	box-sizing:border-box;
 	border: solid 3px #77bde0;
 }
-/*#name {
-	display: block;	
-	width: 500px;	
-	border: none;
-	border-radius: 20px;
-	outline: none;
-	padding: 10px;
-	font-family: 'Sniglet', cursive;
-	font-size: 1em;
-	color: #676767;
-	transition: border 0.5s;
-	-webkit-transition: border 0.5s;
-	-moz-transition: border 0.5s;
-	-o-transition: border 0.5s;
-	border: solid 3px #98d4f3;	
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	border: solid 3px #77bde0;
-}*/
+
 
 #send {
 	display: block;	
