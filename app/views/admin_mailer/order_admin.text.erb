@@ -1,0 +1,13 @@
+Nouvelle commande
+==========================================================
+
+Commande n° <%= @order.stripe_id %>
+    <% user_id = @order.user_id %>
+    Utilisateur : <%= User.find(user_id).email %>
+    <% total = 0 %>
+    <% order_id = @order.order_id %>
+    <% Order.find(order_id).line_items.each do |order| %>
+        <%= order.price %>
+        <% total+=order.kitten.price %>
+    <% end %>
+    <%= total / 100.0 %> €
