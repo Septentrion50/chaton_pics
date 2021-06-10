@@ -11,6 +11,17 @@ class UserMailer < ApplicationMailer
         @user  = User.find(user)
         @order = Order.find(order)
         @url   = 'https://chaton-pics.herokuapp.com'
+<<<<<<< HEAD
+=======
+        line_items = @order.line_items
+        kittens = []
+        line_items.each do |kit|
+            kittens << kit.kitten.picture
+        end
+        kittens.each_with_index do |img, i|
+            attachments["img_#{i}"] = img.blob.download
+        end
+>>>>>>> dev
         mail(to: @user.email, subject: 'Ta commande a été reçue')
     end
     
