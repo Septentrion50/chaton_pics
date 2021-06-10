@@ -10,7 +10,7 @@
         <p> À très vite sur monsite.fr !</p>
         <% total = 0 %>
         <% @order.line_items.each do |order| %>
-            <img src="<%= order.kitten.picture %>">
+            <img src="<%= Rails.application.routes.url_helpers.rails_blob_url(order.kitten.picture) %>">
             <p><%= order.price %></p>
             <p><% total+=order.kitten.price %></p>
         <% end %>
