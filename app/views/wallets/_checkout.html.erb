@@ -2,24 +2,33 @@
   <div class="card-body">
     <h2 class="card-title">Mon Panier</h2>
     <ul class="list-group my-3">
+      <% array=[] %>
       <% @line_items.each do |item| %>
-        <li class="list-group-item">
-          <p><strong>Photo : </strong><%= item.kitten.name%></p>
-          <p><strong>Prix : </strong><%= item.kitten.price / 100.0%> €</p>
-          <p><%= link_to 'Destroy', line_item_path(item) , method: :delete %></p>
-        </li>
 
+        <% if !array.map{|c| c.kitten_id}.include?(item.kitten.id)%>
+          <% array << item %>
         <%end%>
-        <li class="list-group-item">
-          <% if total_charge(current_order)!= nil %> 
-            <h5><strong>Total </strong>
-            <%=total_charge(current_order) / 100.0%> €
-            </h5>
-            <%=link_to 'Confirmer la commande', new_charge_path, class: "btn btn-success card-btn mb-3"%>
-          <% else %>
-            Panier vide
-          <% end %>
-        </li>
+        
+      <%end%>      
+      <% array.each do |item| %>
+      <li class="list-group-item">
+          <p><strong>Photo : </strong><%= item.kitten.name%></p>
+          <p>Quantity: <%= a=LineItem.where(order_id:7,kitten_id:item.kitten.id).length%></p>
+          <p><strong>Prix : </strong><%= a*item.kitten.price / 100.0%> €</p>
+          <p><%= link_to 'Delete', line_item_path(item) , method: :delete %></p>
+      </li>
+      <% end%>
+      
+      <li class="list-group-item">
+        <% if total_charge(current_order)!= nil %> 
+          <h5><strong>Total </strong>
+          <%=total_charge(current_order) / 100.0%> €
+          </h5>
+          <%=link_to 'Confirmer la commande', new_charge_path, class: "btn btn-success card-btn mb-3"%>
+        <% else %>
+          Panier vide
+        <% end %>
+      </li>
     </ul>
     <p>
     <%=link_to "Retour aux produits", root_path, class: "card-link"%> 
