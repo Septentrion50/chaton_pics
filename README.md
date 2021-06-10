@@ -4,8 +4,11 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
+Github : https://github.com/Septentrion50/chaton_pics
 
-* github : https://github.com/Septentrion50/chaton_pics
+* Heroku
+    * https://chaton-pics-developement.herokuapp.com/
+    * https://chaton-pics.herokuapp.com/
 
 * Ruby version
 
