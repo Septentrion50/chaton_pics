@@ -1,9 +1,5 @@
 class UserMailer < ApplicationMailer
-<<<<<<< HEAD
-    default from: 'ced@yopmail.com'
-=======
     default from: 'cedrickittenworld@yopmail.com'
->>>>>>> dev
     
     def welcome_email(user)
         @user = user 
