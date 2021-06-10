@@ -1,0 +1,14 @@
+Bonjour <%= @user.firstname %> et merci pour ta commande. !
+==========================================================
+
+Tu peux récupérer ta commande disponible en pièce-jointe de cet email.
+
+Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+    <% total = 0 %>
+    <% @order.line_items.each do |order| %>
+    <%= order.price %>
+    <% total+=order.kitten.price %>
+    <% end %>
+    <%= total / 100.0 %> €
+
+À très vite sur monsite.fr !

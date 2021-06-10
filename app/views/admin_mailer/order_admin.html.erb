@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    </head>
+    <body>
+        <h1> Commande n° <%= @order.stripe_id %></h1>
+        <% user_id = @order.user_id %>
+        <p>Utilisateur : <%= User.find(user_id).email %></p>
+        <% total = 0 %>
+        <% order_id = @order.order_id %>
+        <% Order.find(order_id).line_items.each do |order| %>
+            <p><%= order.price %></p>
+            <p><% total+=order.kitten.price %></p>
+        <% end %>
+        <p><%= total / 100.0 %> €</p>
+    </body>
+</html>

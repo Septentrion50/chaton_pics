@@ -8,9 +8,10 @@ class UserMailer < ApplicationMailer
     end
 
     def order_confirmation(user, order)
-        @user = user
-        @order = order
-        mail(to: user.email, subject: 'Ta commande a été reçue')
+        @user  = User.find(user)
+        @order = Order.find(order)
+        @url   = 'https://chaton-pics-developement.herokuapp.com'
+        mail(to: @user.email, subject: 'Ta commande a été reçue')
     end
     
 end
