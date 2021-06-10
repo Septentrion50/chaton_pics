@@ -50,6 +50,6 @@ class KittensController < ApplicationController
     end
 
     def kitten_params
-        params.permit(:name, :price, :description)
+        params.permit(:name, :price, :description, :picture)
     end
 end
