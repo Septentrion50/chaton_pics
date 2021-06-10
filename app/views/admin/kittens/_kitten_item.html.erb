@@ -1,0 +1,21 @@
+<li class="border-bottom border-light py-1">
+    <div class="row align-items-center">
+        <a href="<%= kitten_path(@kitten.id) %>" class="btn-admin text-dark col-12 col-sm-6">
+            <% if @kitten.picture.attached? %>
+                <%= image_tag @kitten.picture, alt: 'photo', class: 'card-avatar me-1' %>
+                <% else %>
+                <%= image_tag @kitten.image_url, alt: 'picture', class: 'card-avatar me-1'%>
+            <% end %>
+            <%= @kitten.name %>
+        </a>
+        <div class="col-12 col-sm-6 d-flex justify-content-end">
+            <%= link_to "Edition", 
+                edit_admin_kitten_path(@kitten.id), 
+                class: "btn btn-secondary btn-sm ms-1 my-1" %>
+            <%= link_to "Suppression", 
+                admin_kitten_path(@kitten.id), 
+                method: :delete,
+                class: "card-link btn btn-dark btn-sm ms-1 my-1" %>
+        </div>
+    </div>
+</li>

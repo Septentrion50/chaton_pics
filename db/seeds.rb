@@ -11,6 +11,7 @@ Charge.destroy_all
 Kitten.destroy_all
 Order.destroy_all
 
+<<<<<<< HEAD
 # 10.times do 
 #   string = Faker::Kpop.i_groups
 #   User.create(
@@ -18,6 +19,15 @@ Order.destroy_all
 #     password:Faker::Internet.password(min_length: 8)
 #   ) 
 # end
+=======
+10.times do 
+  User.create(
+    email: Faker::Internet.safe_email,
+    password: Faker::Address.city,
+    is_admin: Faker::Boolean.boolean
+  )
+end
+>>>>>>> dev
 
 # 30.times do 
 #   Wallet.create(
@@ -25,7 +35,7 @@ Order.destroy_all
 #     quantity:Faker::Number.between(from: 1, to: 100)
 #   )
 # end
- 
+
 #50.times do
 #  Charge.create(user_id:User.all.sample.id,wallet_id:Wallet.all.sample,stripe_id:Faker::Lorem.characters(number: 10),token:Faker::Lorem.characters(number: 2)) 
 #end
