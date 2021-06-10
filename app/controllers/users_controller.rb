@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def update
     @user = find_user
     @user.update(permited_params)
-    redirect_to '/'
+    redirect_to user_path(@user)
   end
 
   private
