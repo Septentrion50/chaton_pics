@@ -25,6 +25,15 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-    # After the rescue, if the payment succeeded
+    paid_order = Charge.new(user_id: current_user.id, order_id: current_order.id, stripe_id: customer.id)
+    if paid_order.save
+      session[:order_id] = nil 
+      flash[:notice] = "Paiement effectué !"
+      redirect_to root_path
+    else
+      puts paid_order.errors.messages
+      flash.now[:notice] = "Un problème s'est produit"
+      redirect_to root_path
+    end
   end
 end
