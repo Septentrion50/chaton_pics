@@ -1,6 +1,7 @@
 class Admin::KittensController < ApplicationController
   def index
     @kittens = kittens
+    @charges = charges
   end
 
   def new
@@ -17,7 +18,7 @@ class Admin::KittensController < ApplicationController
     if @kitten.save && params[:picture]
         flash[:notice] = "Carte chaton créée !"
         @kitten.picture.attach(params[:picture]) #attribution de la photo à kitten
-        redirect_to kittens_path
+        redirect_to admin_kittens_path
     else
         flash.now[:notice] = "Ouppps !"
         render :new
@@ -36,17 +37,23 @@ class Admin::KittensController < ApplicationController
   def update
     @kitten = kitten_find
     @kitten.update(kitten_params)
+    redirect_to admin_kittens_path
   end
 
   def destroy
     @kitten = kitten_find
     @kitten.destroy
+    redirect_to admin_kittens_path
   end
 
   private
 
   def kittens
       Kitten.all
+  end
+
+  def charges
+      Charge.all
   end
 
   def kitten_find
