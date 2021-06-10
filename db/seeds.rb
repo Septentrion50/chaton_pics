@@ -55,7 +55,7 @@ kittensArr = [
 30.times do 
   Kitten.create(
     description:Faker::Cannabis.cannabinoid,
-    price:Faker::Number.decimal(l_digits: 2),
+    price:Faker::Number.number(digits: 4), # Price in cents
     name:Faker::Cannabis.buzzword,
     #image_url:kittensArr.sample
     image_url:'pexels-francesco-ungaro-96428.jpg'

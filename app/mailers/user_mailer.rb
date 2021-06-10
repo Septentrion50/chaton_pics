@@ -7,10 +7,10 @@ class UserMailer < ApplicationMailer
         mail(to: @user.email, subject: 'Bienvenue sur Kitten World, le monde merveilleux des chatons !') 
     end
 
-    # def order_email(user, order, charge)
-    #     @user = user
-    #     @order = order
-    #     @charge = charge
-    #     mail(to: @user.email, subject: 'Voici le récapitulatif de ta commande') 
-    # end
+    def order_confirmation(user, order)
+        @user = user
+        @order = order
+        mail(to: user.email, subject: 'Ta commande a été reçue')
+    end
+    
 end
