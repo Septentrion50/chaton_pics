@@ -5,6 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
+* github : https://github.com/Septentrion50/chaton_pics
+
 * Ruby version
 
 * System dependencies
